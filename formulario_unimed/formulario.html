@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assine Unimed</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(149, 199, 129), rgb(20,147,220));
+        }
+        .box{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #108110;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        fieldset{
+            border: 3px solid #3a508d60
+        }
+
+        legend{
+            border: 1px solid #3a508d60;
+            padding: 10px;
+            text-align: center;
+            background-color: #3a508d60;
+            border-radius: 8px;
+        }
+
+        .inputBox{
+            position: relative;
+        }
+
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: #2e1081;
+        }
+
+        #submit{
+            background-image: linear-gradient(to right, rgb(0,92,197), rgb(90,20,220));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        #submit:hover{
+            background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80,19, 198));
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Assine Unimed</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome completo</label>
+                    <br><br>
+                </div>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput">Telefone</label>
+                    <br><br>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput" >Email</label>
+                    <br>
+                </div>
+
+                <p>Categoria:</p>
+
+                <input type="radio" id="empresa" name="empresa" value="empresa" required>
+                <label for="empresa" >Para sua empresa</label>
+
+                <input type="radio" id="familia" name="familia" value="familia" required>
+                <label for="familia">Para sua família</label>
+                <br><br><br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade" class="labelInput">Cidade</label>
+                    <br><br>
+                </div>
+
+                <div class="inputBox">
+                    <input type="text" name="uf" id="uf" class="inputUser" required>
+                    <label for="uf" class="labelInput">Estado</label>
+                    <br><br>
+                </div>
+                
+                <input type="submit" name="submit" id="submit" value="Avançar">
+
+            </fieldset>
+        </form> 
+    </div>
+</body>
+</html>
